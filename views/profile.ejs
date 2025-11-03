@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <section class="container">
+        <section class="title">
+        <h1>Welcome <%= user %></h1>
+        </section>
+        <form action="/chat" method="get">
+        <section class="description">
+            <p>Find a Room Near You, or make your own!</p>
+        </section>
+        <section class="buttons">
+            <button class="btn-border-reveal" id="rooms"><span>Press to see nearby chats!</span></button>
+            <button class="btn-border-reveal" id="showPos"><span>Press to refresh geolocation!</span></button>
+        </section>
+        </form>
+    </section>
+<script type="application/javascript" src="locationtracker.js"></script>
+</body>
+</html>
