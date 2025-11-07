@@ -41,6 +41,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    font-family: 'Source Serif 4','Times New Roman', Times, serif;
 }
 ol, ul {
 	list-style: none;
@@ -99,11 +100,78 @@ header{
 .heroSection{
     background: url('../pexels-karola-g-6634140.jpg');
     background-size:cover;
-    height:800px;
+    height:900px;
     justify-content: center;
 }
 
 h1{
     color:white;
+    font-size: 3rem;
 }
 
+h2{
+    font-size: 2.5rem;
+}
+
+.title{
+    height:50%;
+}
+
+.about{
+    position:relative;
+    height:600px;
+    background: var(--gray);
+}
+
+/* scroll animation derived from css-tricks:https://css-tricks.com/books/greatest-css-tricks/scroll-animation/ */
+/* and further readings from the MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@keyframes */
+.aboutWords{
+    color:var(--gray);
+    justify-content: space-around;
+    position:absolute;
+    right:100%;
+    width:60%;
+    height:100%;
+    background: linear-gradient(
+        90deg,
+        var(--bloo) 0,
+        var(--bloo) 80%,
+        #2a4580 80%,
+        #2a4580 85%,
+        #2a4580bb 85%,
+        #2a4580bb 90%,
+        #2a4580aa 95%,
+        #2a4580aa 100%);
+    
+    opacity: 0;
+    animation: slide 5s ease;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+.about img{
+    position: absolute;
+    object-fit: cover;
+    height:100%;
+    width:100%;
+}
+
+.about p{
+    font-size: 1.5rem;
+    width:40%;
+}
+
+@keyframes slide {
+    0% {
+        right:100%;
+        opacity:0;
+    }
+    20% {
+        right:40%;
+        opacity: 1;
+    }
+}
+
+.aboutMap{
+    height:300px;
+}
