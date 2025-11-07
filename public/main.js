@@ -4,7 +4,7 @@ const room = Qs.parse(location.search, {
 
 const socket = io()
 
-console.log(username)
+console.log(room)
 
 socket.emit('joinRoom', { username, room })
 

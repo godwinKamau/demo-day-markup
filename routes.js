@@ -28,7 +28,7 @@ module.exports = function(app) {
 
     app.get('/sign-in', (req, res, next) => {
         console.log('not authenticated');
-        res.sendFile(path.join(__dirname,'/public/login.html'))
+        res.render(('login'))
     });
 
     app.get('/login-success', (req, res, next) => {
@@ -41,7 +41,7 @@ module.exports = function(app) {
         if (req.isAuthenticated()) {
         res.render(('profile'), {user:req.session.passport.user})
         } else {
-        res.sendFile(path.join(__dirname,'/public/login.html'))
+        res.render(('login'))
         }
     })
 
@@ -53,13 +53,11 @@ module.exports = function(app) {
     });
 
     app.get('/chat', function(req,res){
+        console.log('request',req)
         if (!req.isAuthenticated()) {
             return res.sendFile(path.join(__dirname,'/public/login.html'));
-        }
-        
-        
-        res.render(('chat'),{ user: req.session.passport.user })
-        
+        }        
+        res.render(('chat'),{ user: req.session.passport.user })        
     })
 
     

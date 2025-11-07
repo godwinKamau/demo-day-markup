@@ -52,11 +52,11 @@ const botName = 'Bot'
 
 io.on('connection', (socket) => {
     socket.on('joinRoom', ({ username, room }) => {
-        const user = userJoin(socket.id, username , room.house)
+        const user = userJoin(socket.id, username , room.room)
         console.log(user)
-        socket.join(room.house)
+        socket.join(room.room)
         //Welcome user
-        socket.emit('welcome', formatMessage(botName, `Welcome to House ${room.house}!`))      //sends message to the client-side JS
+        socket.emit('welcome', formatMessage(botName, `Welcome to House ${room.room}!`))      //sends message to the client-side JS
         //Announces presence to other users
         socket.broadcast.to(user.room).emit('welcome', formatMessage(botName,`${user.username} has joined the chat`))
 

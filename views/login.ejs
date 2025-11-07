@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login/Sign Up</title>
+        <meta name="description" content="Sign Up/Login to chat!">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/logandsign.css">
+    </head>
+    <body class="flexTop">
+        <container>
+            <section class="choices">
+                <button id="login">Login</button>
+                <button id="signup">Sign Up</button>
+            </section>
+            <section class="inputs">
+                <div class="background-slider"></div>
+                <section class="info">
+                <form action="/login" method="post">
+                    <div class="form-group signupGroup destroy">
+                        <div class="cubeTop signup-border">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="cubeMid signup-border">
+                            <input type="text" id="email" name="email">
+                        </div>
+                        <div class="cubeRight signup-border"></div> 
+                    </div>
+                    <!-- Signup/Login Stuffs -->
+                    <div class="form-group loginGroup">
+                        <div class="cubeTop login-border">
+                            <label for="username" class="login-text">Username</label>
+                        </div>
+                        <div class="cubeMid login-border">
+                            <input type="text" id="username" name="username">
+                        </div>
+                        <div class="cubeRight login-border"></div> 
+                    </div>
+                    
+                <div class="form-group loginGroup">
+                    <div class="cubeTop login-border">
+                        <label for="password" class="login-text">Password</label>
+                    </div>
+                    <div class="cubeMid login-border">
+                        <input type="text" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="cubeRight login-border"></div>
+                </div>
+                </section>
+                <section class="button">
+                    <button type="submit">Submit</button>
+                </section>
+                </form>
+            </section>
+            
+            
+        </container>
+    <script type="text/javascript" src="js/logandsign.js"></script>    
+    </body>
+</html>

@@ -1,7 +1,8 @@
-document.querySelector('#postmessage').addEventListener('click',postmessage)
+// document.querySelector('#postmessage').addEventListener('click',postmessage)
 document.querySelector('#showPos').addEventListener('click',showPos)
 const display = document.querySelector('#current-location')
 const list = document.querySelector('#rooms')
+// document.querySelector('#newRoomMaker').addEventListener('click',newRoomMaker)
 let locations = []
 
 //check the database for messages in locations
@@ -11,20 +12,20 @@ setInterval(getmessages,1000*60*60)
 function getmessages() {
     navigator.geolocation.getCurrentPosition((pos) => {
         const crds = pos.coords
-        fetch('/getmessages')
-            .then(res=>res.json())
-            .then(data=> {
-                data.forEach(elem=>{
-                    // console.log(elem.location)
-                    const distance = haversineDistance(elem.location.lat,elem.location.long,crds.latitude,crds.longitude)
-                    if (distance < 1) {
-                        console.log(elem.message)
-                        const message = document.createElement('li')
-                        message.textContent = elem.message
-                        list.appendChild(message)
-                    }
-                })
-            })
+        // fetch('/getmessages')
+        //     .then(res=>res.json())
+        //     .then(data=> {
+        //         data.forEach(elem=>{
+        //             // console.log(elem.location)
+        //             const distance = haversineDistance(elem.location.lat,elem.location.long,crds.latitude,crds.longitude)
+        //             if (distance < 1) {
+        //                 console.log(elem.message)
+        //                 const message = document.createElement('li')
+        //                 message.textContent = elem.message
+        //                 list.appendChild(message)
+        //             }
+        //         })
+        //     })
         }
     )
 }
@@ -77,11 +78,18 @@ function haversineDistance(lat1, lon1, lat2, lon2) {
 
 function showPos(){
     navigator.geolocation.getCurrentPosition((pos) => {
-        display.innerText = `Your current position id ${pos.coords.latitude}, ${pos.coords.longitude}`
+       console.log(`Your current position id ${pos.coords.latitude}, ${pos.coords.longitude}`)
+       fetch(`http://api.geonames.org/findNearbyPlaceNameJSON?lat=${pos.coords.latitude}&lng=${pos.coords.longitude}&username=significantswim1984`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.geonames[0].name)
+            // looking up reloading pages from the client-side for the millionth time: https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage
+            window.location.href=`/chat?room=${data.geonames[0].name}`
+        })
     })
 } 
 
-getmessages()
+// getmessages()
 
 
 //messing around with haversine to give a conditional to display message.
