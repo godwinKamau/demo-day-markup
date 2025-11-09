@@ -1,6 +1,5 @@
 document.querySelector("#signup").addEventListener('click',signup)
 document.querySelector("#login").addEventListener('click',login)
-const slider = document.querySelector(".background-slider")
 const loginGroupBorder = document.querySelectorAll(".login-border")
 const loginGroupText = document.querySelectorAll(".login-text")
 const signupGroup = document.querySelectorAll(".signupGroup")
@@ -11,7 +10,7 @@ function signup(){
     if(tracker === 1){
         return
     }
-    slider.classList.toggle("width-transition-active")
+    
     signupGroup.forEach(entry=>{
         entry.classList.toggle("destroy")
     })
@@ -23,6 +22,8 @@ function signup(){
         entry.classList.remove("login-text")
         entry.classList.add("signup-text")
     })
+    document.querySelector("h1").innerHTML = "Sign Up"
+    
     form.action = "/register"
     tracker++
 }
@@ -31,7 +32,7 @@ function login(){
     if(tracker === 0){
         return
     }
-    slider.classList.toggle("width-transition-active")
+    
     signupGroup.forEach(entry=>{
         entry.classList.toggle("destroy")
     })
@@ -43,6 +44,7 @@ function login(){
         entry.classList.add("login-text")
         entry.classList.remove("signup-text")
     })
+    document.querySelector("h1").innerHTML = "Log In"
     form.action = "/login"
     tracker--
 }

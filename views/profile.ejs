@@ -5,25 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
 </head>
-<body>
-    <section class="container">
+<body class="flexTop">
+    <container class="flexTop">
         <section class="title">
         <h1>Welcome <%= user %></h1>
         </section>
         
         <section class="description">
-            <p>Find a Room Near You, or make your own!</p>
+            <p>Find your Community!</p>
         </section>
         <section class="buttons">
-            <button class="btn-border-reveal" id="rooms"><span>Press to see nearby chats!</span></button>
-            <button class="btn-border-reveal" id="showPos"><span>Press to refresh geolocation!</span></button>
+            <button class="btn-border-reveal" id="showPos"><span>Press to enter your city chat!</span></button>
         </section>
-        <form action="/chat" method="get">
+        <!-- <form action="/chat" method="get">
             <input type="text" name="room">
             <button type="submit">Create Room</button>
+        </form> -->
+        <form action="/logout" method="post">
+            <button type="submit">Log Out</button>
         </form>
-    </section>
+    </container>
 <script type="application/javascript" src="locationtracker.js"></script>
 </body>
 </html>

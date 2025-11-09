@@ -1,5 +1,6 @@
 /* color scheme from coolors.co:https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff */
 :root{
+    --bblue:#778da9;
     --bloo:#14213D;
     --gold:#FCA311;
     --gray:#E5E5E5;
@@ -69,7 +70,7 @@ a{
 }
 
 header{
-    position:absolute;
+    position:fixed;
     top:0;
     height:70px;
     background: #000000aa;
@@ -78,6 +79,7 @@ header{
     flex-direction: row;
     justify-content: flex-end;
     padding-top: 20px;
+    z-index: 2;
 }
 
 .navPill{
@@ -97,11 +99,18 @@ header{
     scale:105%;
 }
 
+/* credit for parrallax affect: https://www.w3schools.com/howto/howto_css_parallax.asp */
+
 .heroSection{
     background: url('../pexels-karola-g-6634140.jpg');
     background-size:cover;
     height:900px;
     justify-content: center;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1{
@@ -172,6 +181,120 @@ h2{
     }
 }
 
-.aboutMap{
+.registerNow, .aboutMap{
     height:300px;
+    border-top: 10px solid var(--bloo);
+    border-bottom: 10px solid var(--bloo);
+    justify-content: space-around;
 }
+
+.aboutMap{
+    justify-content: space-around;
+}
+
+.aboutMap span{
+    font-size: 4rem;
+    padding: 15px;
+    border:4px solid var(--bloo);
+    border-radius: 50px;
+}
+
+.registerNow{
+    background: var(--bblue);
+    color:var(--gold);
+    height:400px;
+}
+
+.registerNow > section{
+    text-align: center;
+}
+
+.registerNow p{
+    font-style: italic;
+}
+
+.personBox{
+    display: flex;
+    width:100%;
+    height:60%;
+    width:500px;
+    gap:15px;
+}
+
+.person{
+    width:50%;
+    height:100%;
+    border:5px solid var(--bloo);
+    border-radius: 30px;
+    background: black;
+    justify-content: space-around;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.person h3{
+    font-size: 2rem;
+}
+
+.person span{
+    font-size: 2.5rem;
+    border:3px solid gold;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.person:hover{
+    color:black;
+    background: var(--gray);
+}
+
+.mailingList{
+    height:500px;
+    width:100%;
+    background: url('../pexels-kei-scampa-1201427-10755778.jpg');
+    background-position: bottom;
+    background-size:cover;
+    justify-content: center;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mailBox{
+    height:70%;
+    width:40%;
+    background: radial-gradient(ellipse, black 60%, #E5E5E522);
+    border-radius: 20px;
+    color: var(--gray);
+    justify-content: center;
+    gap:30px;
+}
+
+.mailBox input[type="email"]{
+    height:3rem;
+    width:30rem;
+}
+
+.mailBox button{
+    height: 3rem;
+    width:5rem;
+    margin-left:1rem;
+    scale:100%;
+    transition: all .5s ease;
+    font-weight: bold;
+}
+
+.mailBox button:hover{
+    background: var(--gold);
+    color: var(--gray);
+    scale:105%;
+}
+
+footer{
+    height:150px;
+    width: 100%;
+    background: var(--bloo);
+}
+

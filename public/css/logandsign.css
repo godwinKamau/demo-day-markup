@@ -1,12 +1,26 @@
 body{
-    background: var(--gray);
+    background: url('../pexels-mesut-yalcin-1233429888-28897244.jpg');
     height:100vh;
     width:100vw;
     justify-content: center;
 }
 
+.tab{
+    width:40%;
+    height:12%;
+    justify-content: center;
+    font-size: 2.5rem;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: var(--bloo);
+    margin-left:10px;
+}
+
+.title{
+
+}
+
 container{
-    border:1px solid black;
     height:600px;
     width:450px;
 }
@@ -17,12 +31,20 @@ container{
     justify-content: space-between;
 }
 
+.buttons{
+    justify-content: space-between;
+}
+
+.choices div{
+    width: 50px;
+    height:100%;
+    display: flex;
+    justify-content: center;    
+}
+
 .choices button{
-    height: 100%;
-    width:40%;
-    font-size: 2.5rem;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 30px;
+    height:2rem;
+
 }
 
 #login{
@@ -37,17 +59,29 @@ container{
 
 .inputs{
     position:relative;
-    border:1px solid white;
     height: 60%;
+    border:5px solid var(--bloo);
+    border-radius: 5px;
+    justify-content: space-around;
+    background: linear-gradient(var(--gray),white);
 }
 
-.background-slider{
-    position:absolute;
-    z-index: -1;
-    width: 100%;
-    height:100%;
-    background: var(--bloo);
-    transition:width .2s;
+.info{
+    height: 70%;
+    justify-content: space-around;
+}
+
+form{
+    height: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input[type="text"]{
+    height:3rem;
+    width: 15rem;
 }
 
 .destroy{

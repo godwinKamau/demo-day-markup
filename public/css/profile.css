@@ -1,0 +1,22 @@
+body{
+    height: 90vh;
+    justify-content: center;
+    background: url(../pexels-mesut-yalcin-1233429888-28897244.jpg);
+    background-size: cover;
+}
+
+h1{
+    color:black;
+}
+
+button{
+
+}
+
+container{
+    border: 1px solid black;
+    width:40%;
+    height:500px;
+    justify-content: space-around;
+    background: linear-gradient(var(--gray));
+}

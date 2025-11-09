@@ -9,48 +9,53 @@
     </head>
     <body class="flexTop">
         <container>
-            <section class="choices">
-                <button id="login">Login</button>
-                <button id="signup">Sign Up</button>
+            <section class="tab flexTop">
+                <h1 class="title">Log In</h1>
             </section>
-            <section class="inputs">
-                <div class="background-slider"></div>
-                <section class="info">
+            <section class="inputs flexTop">
+                <section class="info flexTop">
                 <form action="/login" method="post">
                     <div class="form-group signupGroup destroy">
-                        <div class="cubeTop signup-border">
+                        <div class="signup-border">
                             <label for="email">Email</label>
                         </div>
-                        <div class="cubeMid signup-border">
+                        <div class="signup-border">
                             <input type="text" id="email" name="email">
                         </div>
-                        <div class="cubeRight signup-border"></div> 
+                        <div class="signup-border"></div> 
                     </div>
                     <!-- Signup/Login Stuffs -->
                     <div class="form-group loginGroup">
-                        <div class="cubeTop login-border">
+                        <div class="login-border">
                             <label for="username" class="login-text">Username</label>
                         </div>
-                        <div class="cubeMid login-border">
+                        <div class="login-border">
                             <input type="text" id="username" name="username">
                         </div>
-                        <div class="cubeRight login-border"></div> 
+                        <div class="login-border"></div> 
                     </div>
                     
                 <div class="form-group loginGroup">
-                    <div class="cubeTop login-border">
+                    <div class="login-border">
                         <label for="password" class="login-text">Password</label>
                     </div>
-                    <div class="cubeMid login-border">
+                    <div class="login-border">
                         <input type="text" class="form-control" id="password" name="password">
                     </div>
-                    <div class="cubeRight login-border"></div>
+                    <div class="login-border"></div>
                 </div>
                 </section>
-                <section class="button">
+                <section class="buttons flexTop">
                     <button type="submit">Submit</button>
+                    
                 </section>
                 </form>
+
+                <section class="choices">
+                        <button id="login">Login</button>
+                        <div>or</div>
+                        <button id="signup">Sign Up</button>
+                    </section>
             </section>
             
             
