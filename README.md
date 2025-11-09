@@ -5,9 +5,10 @@ A primary markup/API design for the Resilient Coder's Demo Day Project. Right no
 
 <hr>
 
-Sources: 
+## Sources: 
 
 Tutorial from the socket.io tutorial: https://socket.io/docs/v4/tutorial/introduction
+<br>
 Video about chatrooms: https://www.youtube.com/watch?v=jD7FnbI76Hg#
 
 <hr>
@@ -25,7 +26,7 @@ Video about chatrooms: https://www.youtube.com/watch?v=jD7FnbI76Hg#
 
 ## Live Demo
 
-demo-day-markup.onrender.com
+https://demo-day-markup.onrender.com/
 
 <hr>
 
