@@ -1,4 +1,4 @@
-# demo-day-markup
+# demo-day-markup (Secret Keys)
 
 
 A primary markup/API design for the Resilient Coder's Demo Day Project. Right now, it is a full-stack app with that keeps track of the user's geolocation and calls the geonames API to find the city. It then joins a room based off the location for people in the area to talk.
@@ -32,6 +32,8 @@ https://demo-day-markup.onrender.com/
 
 <hr>
 
+## (For Developers)
+
 ### Installation & Setup
 
 Make sure you have Node.js and MongoDB (or MongoDB Atlas) set up.
@@ -51,9 +53,8 @@ Create a .env file:
 ```
 MONGODB_URL=your_mongo_connection_string
 ```
-<hr>
 
-## Run the App
+### Run the App
 
 ```
 npm run dev
@@ -81,10 +82,3 @@ This runs the server using nodemon for automatic reload during development.
     i.e limiting the scope of rooms, organizing the database around different cities, and contorlling access to features based off of geolocation.
 
 - Changes to user schema to add point system based off of how many rooms they visit.
-
-
-<hr>
-
-## License
-
-ISC
